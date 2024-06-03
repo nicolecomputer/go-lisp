@@ -2,6 +2,21 @@
 
 This is a toy lisp interpreter.
 
+## Running the code
+
+This code is written in [go](https://go.dev) and you'll need a working install.
+It has zero external dependencies.
+
+- git clone
+
+To run the repl:
+
+`go run cli/repl.go`
+
+To run all of the tests:
+
+`go test ./...`
+
 ## Next steps
 
 - Checking if a list is balanced during parsing (e.g. `")))))))()"`)
@@ -38,5 +53,7 @@ producing a result is doing what it's supposed to and that refactoring is safe.
 ## Decisions
 
 One decision that I'm unsure about is that this interpreter currently does not
-use s-expressions. It builds up full arrays instead. This is different than most
-lisps and I'm unsure how it'll play out in the long term.
+internally use s-expressions. It builds up full objects instead.
+
+This is different than most lisps and I'm unsure how it'll play out in the long
+term.
