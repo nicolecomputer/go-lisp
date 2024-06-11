@@ -2,6 +2,10 @@ package lisp
 
 import "unicode"
 
+// This makes sure we don't append tokens that are empty
+// This happens when there's whitespace because that
+// normally isn't saved as part of the token
+// This decision makes this lisp whitespace insensitive
 func shouldAppendToken(token string) bool {
 	return len(token) > 0
 }
